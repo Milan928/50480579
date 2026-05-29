@@ -1,0 +1,850 @@
+
+.ui-page,
+.ui-content {
+    background: transparent !important;
+    border: none !important;
+}
+
+.ui-header,
+.ui-footer {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.ui-content {
+    padding: 0 !important;
+}
+
+/* Remove jQuery Mobile's input styling so ours works */
+input,
+textarea,
+select {
+    box-shadow: none !important;
+}
+
+
+/* ---- Global base styles ---- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', -apple-system, sans-serif !important;
+    background: #f0f4ff !important;
+    color: #1e293b !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+    background: #f0f4ff !important;
+    min-height: 100vh;
+}
+
+
+/* 
+   login page
+*/
+
+.login-banner {
+    background: linear-gradient(160deg, #3b6ef8, #6d4aff);
+    padding: 56px 24px 80px;
+    text-align: center;
+    position: relative;
+}
+
+/* Decorative circle shapes in the background */
+.login-banner::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+    top: -60px;
+    right: -50px;
+}
+
+.login-banner::after {
+    content: '';
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 10px;
+    left: -40px;
+}
+
+/* The checkmark icon box */
+.login-icon-box {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 18px;
+    font-size: 1.8rem;
+    line-height: 64px;
+    text-align: center;
+    margin: 0 auto 16px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.login-banner h1 {
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    color: white !important;
+    text-shadow: none !important;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 6px !important;
+}
+
+.login-banner p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* White card that overlaps the banner at the bottom */
+.login-card {
+    background: white;
+    border-radius: 24px 24px 0 0;
+    padding: 28px 24px 40px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+}
+
+.login-card h2 {
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    margin-bottom: 20px !important;
+}
+
+/* Thin horizontal divider between Sign In and Create Account */
+.or-divider {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.82rem;
+    margin: 8px 0;
+    position: relative;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 42%;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+.or-divider::before { left: 0; }
+.or-divider::after  { right: 0; }
+
+
+/* App header bar */
+.app-header {
+    background: white !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 0 16px !important;
+}
+
+.app-header h1 {
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    text-shadow: none !important;
+}
+
+.app-header-home h1 {
+    color: #3b6ef8 !important;
+    font-size: 1.1rem !important;
+}
+
+.back-link,
+.logout-link {
+    color: #3b6ef8 !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+/* Page content area (below the header) */
+.page-content {
+    background: #f0f4ff !important;
+    padding: 16px 16px 90px !important;
+}
+
+/* White form card */
+.form-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Coloured label strip at the top of each form card */
+.form-card-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 99px;
+    margin-bottom: 18px;
+}
+
+.form-card-label.blue   { background: #dbeafe; color: #1d4ed8; }
+.form-card-label.orange { background: #ffedd5; color: #c2410c; }
+.form-card-label.teal   { background: #ccfbf1; color: #0f766e; }
+
+/* Field group = label + input together */
+.field-group {
+    margin-bottom: 16px;
+}
+
+.field-group label {
+    display: block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 6px;
+}
+
+.label-hint {
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.required {
+    color: #ef4444;
+}
+
+/* Text inputs, textareas */
+.field-group input[type="text"],
+.field-group input[type="email"],
+.field-group input[type="password"],
+.field-group input[type="date"],
+.field-group input[type="url"],
+.field-group textarea,
+.login-card input {
+    display: block;
+    width: 100%;
+    padding: 12px 14px !important;
+    background: #f8fafc !important;
+    border: 1.5px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 0.9rem !important;
+    color: #1e293b !important;
+    outline: none;
+    -webkit-appearance: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.field-group input:focus,
+.field-group textarea:focus,
+.login-card input:focus {
+    border-color: #3b6ef8 !important;
+    background: white !important;
+}
+
+.field-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+
+/* 
+   buttons decorations
+  */
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    transition: transform 0.1s, opacity 0.15s;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Blue filled button - main actions */
+.btn-solid {
+    background: #3b6ef8 !important;
+    color: white !important;
+    box-shadow: 0 4px 14px rgba(59, 110, 248, 0.3);
+}
+
+/* Outlined button - secondary actions */
+.btn-outline {
+    background: transparent !important;
+    color: #3b6ef8 !important;
+    border: 2px solid #3b6ef8 !important;
+}
+
+/* Red button - destructive actions */
+.btn-danger {
+    background: #fee2e2 !important;
+    color: #dc2626 !important;
+    border: 1.5px solid #fca5a5 !important;
+}
+
+.btn-danger:active {
+    background: #dc2626 !important;
+    color: white !important;
+}
+
+
+/* 
+   priority picker decorations
+ */
+
+.priority-picker {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.prio-opt {
+    flex: 1;
+    padding: 10px 4px;
+    border-radius: 10px;
+    border: 1.5px solid #e2e8f0;
+    background: #f8fafc !important;
+    color: #64748b !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 0.76rem;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: all 0.15s;
+}
+
+/* Active/selected state for each priority */
+.prio-low.prio-selected {
+    border-color: #22c55e !important;
+    background: #dcfce7 !important;
+    color: #15803d !important;
+}
+
+.prio-medium.prio-selected {
+    border-color: #f97316 !important;
+    background: #ffedd5 !important;
+    color: #c2410c !important;
+}
+
+.prio-high.prio-selected {
+    border-color: #ef4444 !important;
+    background: #fee2e2 !important;
+    color: #dc2626 !important;
+}
+
+
+/* 
+   toggle switch decorations
+ */
+
+.toggle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.toggle-row label:first-child {
+    margin-bottom: 0;
+}
+
+/* The switch container */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The grey/green track */
+.toggle-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #cbd5e1;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* The white circle that moves left/right */
+.toggle-track::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* When checkbox is checked, track turns green and circle moves right */
+.toggle-switch input:checked + .toggle-track {
+    background: #22c55e;
+}
+
+.toggle-switch input:checked + .toggle-track::before {
+    transform: translateX(22px);
+}
+
+
+/* 
+   error and alert decorations
+*/
+
+.error-msg {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    color: #dc2626;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* 
+ home page decorations
+*/
+.home-content {
+    padding: 0 0 90px !important;
+    background: #f0f4ff !important;
+}
+
+/* Purple/blue gradient banner with greeting and stats */
+.home-top {
+    background: linear-gradient(135deg, #3b6ef8, #6d4aff);
+    padding: 20px 20px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.greeting-hi {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+}
+
+.greeting-name {
+    font-size: 1.3rem !important;
+    font-weight: 800;
+    color: white !important;
+    margin: 0 !important;
+}
+
+/* Row of 3 small stat boxes on the right */
+.stats-row {
+    display: flex;
+    gap: 8px;
+}
+
+.stat-box {
+    width: 58px;
+    border-radius: 12px;
+    padding: 8px 6px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-blue   { background: rgba(255, 255, 255, 0.15); }
+.stat-orange { background: rgba(249, 115, 22, 0.3); }
+.stat-green  { background: rgba(34, 197, 94, 0.3); }
+
+.stat-number {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+/* 
+    progress bar decorations
+*/
+.progress-section {
+    background: white;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 7px;
+}
+
+.progress-track {
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #3b6ef8, #6d4aff);
+    border-radius: 99px;
+    transition: width 0.4s ease;
+}
+
+/* 
+    filter buttons decoratoions
+*/
+
+.filter-row {
+    display: flex;
+    gap: 8px;
+    padding: 10px 16px;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    overflow-x: auto;
+}
+
+.filter-btn {
+    flex-shrink: 0;
+    padding: 6px 16px;
+    border-radius: 99px;
+    border: 1.5px solid #e2e8f0;
+    background: transparent;
+    color: #64748b;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: all 0.15s;
+}
+
+.filter-btn.active {
+    background: #3b6ef8 !important;
+    border-color: #3b6ef8 !important;
+    color: white !important;
+}
+
+.filter-high.active {
+    background: #ef4444 !important;
+    border-color: #ef4444 !important;
+    color: white !important;
+}
+
+/* 
+    search button decorations
+*/
+
+.search-wrap {
+    padding: 10px 16px;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.search-wrap input {
+    width: 100%;
+    padding: 9px 14px !important;
+    background: #f8fafc !important;
+    border: 1.5px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 0.88rem !important;
+    color: #1e293b !important;
+    -webkit-appearance: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.search-wrap input:focus {
+    border-color: #3b6ef8 !important;
+    background: white !important;
+}
+
+/*  
+    task cards decorations
+*/
+
+#task-list {
+    padding: 12px 16px 0;
+}
+
+/* Each task is a white card with a coloured left border */
+.task-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #e2e8f0;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    padding: 14px 14px 12px;
+    cursor: pointer;
+    animation: pop-in 0.25s ease;
+    transition: transform 0.1s;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+}
+
+.task-card:active {
+    transform: scale(0.98);
+}
+
+/* Left border colour based on priority */
+.task-card.priority-high   { border-left-color: #ef4444; }
+.task-card.priority-medium { border-left-color: #f97316; }
+.task-card.priority-low    { border-left-color: #22c55e; }
+
+/* Faded out when the task is done */
+.task-card.is-done {
+    opacity: 0.55;
+}
+
+.task-card.is-done .task-title {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+@keyframes pop-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Top row: checkbox + title + arrow */
+.task-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+/* Round circle to check/uncheck a task */
+.task-check {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #cbd5e1;
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+}
+
+/* Green tick when completed */
+.task-check.checked {
+    background: #22c55e;
+    border-color: #22c55e;
+}
+
+.task-check.checked::after {
+    content: '✓';
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.task-title {
+    flex: 1;
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.35;
+}
+
+.task-arrow {
+    color: #cbd5e1;
+    font-size: 1rem;
+    margin-top: 1px;
+}
+
+/* Bottom row of small tag pills */
+.task-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.67rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+}
+
+.tag-high    { background: #fee2e2; color: #dc2626; }
+.tag-medium  { background: #ffedd5; color: #c2410c; }
+.tag-low     { background: #dcfce7; color: #15803d; }
+.tag-cat     { background: #ede9fe; color: #6d28d9; }
+.tag-due     { background: #f1f5f9; color: #64748b; }
+.tag-overdue { background: #fee2e2; color: #dc2626; }
+
+/* 
+    footer decorations
+*/
+
+.app-footer {
+    background: white !important;
+    border-top: 1px solid #e2e8f0 !important;
+    text-align: right;
+    padding: 10px 20px 14px !important;
+}
+
+/* Big circular + button */
+.fab-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #3b6ef8 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    font-size: 1.6rem !important;
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: 0 6px 20px rgba(59, 110, 248, 0.4);
+    line-height: 1 !important;
+}
+
+/* 
+    loading spinner decorations
+*/
+.loading-state {
+    text-align: center;
+    padding: 48px 20px;
+    color: #94a3b8;
+    font-size: 0.88rem;
+}
+
+.spinner {
+    width: 34px;
+    height: 34px;
+    margin: 0 auto 14px;
+    border: 3px solid #e2e8f0;
+    border-top-color: #3b6ef8;
+    border-radius: 50%;
+    animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 
+    empty state decorations
+*/
+.empty-state {
+    text-align: center;
+    padding: 52px 30px;
+    margin: 12px 16px;
+    background: white;
+    border: 1.5px dashed #cbd5e1;
+    border-radius: 16px;
+}
+
+.empty-emoji {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.empty-state h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    font-size: 0.86rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* 
+    toast notification 
+*/
+#toast-msg {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(16px);
+    background: #1e293b;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 99px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    max-width: 88vw;
+    z-index: 9999;
+    transition: all 0.25s;
+}
+
+#toast-msg.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+#toast-msg.success { background: #22c55e; }
+#toast-msg.danger  { background: #ef4444; }
