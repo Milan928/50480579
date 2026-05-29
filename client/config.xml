@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.taskflow.app" version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+    <name>Taska</name>
+    <description>Personal task manager app</description>
+    <author email="milan.tilija@cqumail.com">Milan</author>
+
+    <content src="index.html" />
+
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+
+    <platform name="android">
+        <allow-navigation href="*" />
+        <!-- Allows HTTP connections to local dev server -->
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+    </platform>
+
+    <!--
+        Run these commands to install required plugins:
+        cordova plugin add cordova-plugin-whitelist
+        cordova plugin add cordova-plugin-network-information
+        cordova plugin add cordova-plugin-splashscreen
+    -->
+
+</widget>
